@@ -4,5 +4,13 @@
 <dict>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+
+	<!-- Family Controls / Screen Time Permission -->
+	<key>NSFamilyControlsUsageDescription</key>
+	<string>ThinkTwice needs access to Screen Time controls to help you manage and restrict apps, supporting your financial goals by reducing impulsive spending.</string>
+
+	<!-- User Notifications -->
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>ThinkTwice sends notifications to alert you when you attempt to open a restricted app.</string>
 </dict>
 </plist>

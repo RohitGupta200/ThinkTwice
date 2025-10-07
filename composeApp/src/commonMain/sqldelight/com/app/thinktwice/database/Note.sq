@@ -1,0 +1,68 @@
+CREATE TABLE IF NOT EXISTS Note (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    userId INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    category TEXT,
+    isImportant INTEGER NOT NULL DEFAULT 0,
+    createdAt INTEGER NOT NULL,
+    updatedAt INTEGER NOT NULL,
+    FOREIGN KEY(userId) REFERENCES User(id) ON DELETE CASCADE
+);
+
+-- Index for better performance
+CREATE INDEX IF NOT EXISTS note_user_id_idx ON Note(userId);
+CREATE INDEX IF NOT EXISTS note_category_idx ON Note(category);
+CREATE INDEX IF NOT EXISTS note_created_at_idx ON Note(createdAt);
+
+-- Queries
+insertNote:
+INSERT INTO Note(userId, title, content, category, isImportant, createdAt, updatedAt)
+VALUES(?, ?, ?, ?, ?, ?, ?);
+
+getNoteById:
+SELECT * FROM Note WHERE id = ?;
+
+getNotesByUserId:
+SELECT * FROM Note WHERE userId = ? ORDER BY createdAt DESC;
+
+getNotesByCategory:
+SELECT * FROM Note WHERE category = ? ORDER BY createdAt DESC;
+
+getImportantNotes:
+SELECT * FROM Note WHERE isImportant = 1 ORDER BY createdAt DESC;
+
+searchNotes:
+SELECT * FROM Note
+WHERE title LIKE '%' || ? || '%' OR content LIKE '%' || ? || '%'
+ORDER BY createdAt DESC;
+
+getAllNotes:
+SELECT * FROM Note ORDER BY createdAt DESC;
+
+updateNote:
+UPDATE Note SET
+    title = ?,
+    content = ?,
+    category = ?,
+    isImportant = ?,
+    updatedAt = ?
+WHERE id = ?;
+
+deleteNote:
+DELETE FROM Note WHERE id = ?;
+
+deleteNotesByUserId:
+DELETE FROM Note WHERE userId = ?;
+
+getNoteCount:
+SELECT COUNT(*) AS count FROM Note;
+
+getNoteCountByUser:
+SELECT COUNT(*) AS count FROM Note WHERE userId = ?;
+
+deleteAllNotes:
+DELETE FROM Note;
+
+lastInsertRowId:
+SELECT last_insert_rowid();

@@ -1,0 +1,63 @@
+-- RestrictedApp table
+-- Stores apps that the user has chosen to restrict/monitor
+CREATE TABLE IF NOT EXISTS RestrictedApp (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    appId TEXT NOT NULL UNIQUE,
+    appName TEXT NOT NULL,
+    packageName TEXT NOT NULL,
+    iconPath TEXT,
+    isEnabled INTEGER NOT NULL DEFAULT 1,
+    createdAt INTEGER NOT NULL,
+    updatedAt INTEGER NOT NULL
+);
+
+-- Indexes for performance
+CREATE INDEX IF NOT EXISTS idx_restricted_app_package ON RestrictedApp(packageName);
+CREATE INDEX IF NOT EXISTS idx_restricted_app_enabled ON RestrictedApp(isEnabled);
+
+-- Queries
+selectAll:
+SELECT * FROM RestrictedApp
+ORDER BY appName ASC;
+
+selectEnabled:
+SELECT * FROM RestrictedApp
+WHERE isEnabled = 1
+ORDER BY appName ASC;
+
+selectByPackageName:
+SELECT * FROM RestrictedApp
+WHERE packageName = ?;
+
+selectById:
+SELECT * FROM RestrictedApp
+WHERE id = ?;
+
+insert:
+INSERT OR REPLACE INTO RestrictedApp (appId, appName, packageName, iconPath, isEnabled, createdAt, updatedAt)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+update:
+UPDATE RestrictedApp
+SET appName = ?, packageName = ?, iconPath = ?, isEnabled = ?, updatedAt = ?
+WHERE id = ?;
+
+updateEnabled:
+UPDATE RestrictedApp
+SET isEnabled = ?, updatedAt = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM RestrictedApp
+WHERE id = ?;
+
+deleteByPackageName:
+DELETE FROM RestrictedApp
+WHERE packageName = ?;
+
+deleteAll:
+DELETE FROM RestrictedApp;
+
+countEnabled:
+SELECT COUNT(*) FROM RestrictedApp
+WHERE isEnabled = 1;

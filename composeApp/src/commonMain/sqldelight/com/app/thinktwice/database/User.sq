@@ -1,0 +1,47 @@
+CREATE TABLE IF NOT EXISTS User (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL UNIQUE,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
+    createdAt INTEGER NOT NULL,
+    updatedAt INTEGER NOT NULL
+);
+
+-- Queries
+insertUser:
+INSERT INTO User(username, email, firstName, lastName, createdAt, updatedAt)
+VALUES(?, ?, ?, ?, ?, ?);
+
+getUserById:
+SELECT * FROM User WHERE id = ?;
+
+getUserByUsername:
+SELECT * FROM User WHERE username = ?;
+
+getUserByEmail:
+SELECT * FROM User WHERE email = ?;
+
+getAllUsers:
+SELECT * FROM User ORDER BY createdAt DESC;
+
+updateUser:
+UPDATE User SET
+    username = ?,
+    email = ?,
+    firstName = ?,
+    lastName = ?,
+    updatedAt = ?
+WHERE id = ?;
+
+deleteUser:
+DELETE FROM User WHERE id = ?;
+
+getUserCount:
+SELECT COUNT(*) AS count FROM User;
+
+deleteAllUsers:
+DELETE FROM User;
+
+lastInsertRowId:
+SELECT last_insert_rowid();

@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission for accessing app usage statistics -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Permission for overlay/blocker screen -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Foreground service permission (Android 9+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- Foreground service data sync permission (Android 14+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Use full screen intent permission (Android 14+) - Required to show blocker over other apps -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <!-- Post notifications permission (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Schedule exact alarms for snooze timers (Android 12+) -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -8,15 +31,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
+
+        <!-- Main Activity -->
         <activity
             android:exported="true"
             android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- App Blocker Activity -->
+        <activity
+            android:name="com.app.thinktwice.applocking.ui.BlockerActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+
+        <!-- Follow-up Questionnaire Activity -->
+        <activity
+            android:name="com.app.thinktwice.applocking.ui.FollowupActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Material.Light.Dialog" />
+
+        <!-- App Monitoring Foreground Service -->
+        <service
+            android:name="com.app.thinktwice.applocking.service.AppMonitorService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- Blocker Overlay Service - Shows fullscreen overlay over restricted apps -->
+        <service
+            android:name="com.app.thinktwice.applocking.overlay.BlockerOverlayService"
+            android:exported="false" />
+
+        <!-- Snooze Alarm Receiver -->
+        <receiver
+            android:name="com.app.thinktwice.applocking.receiver.SnoozeAlarmReceiver"
+            android:exported="false" />
+
     </application>
 
 </manifest>

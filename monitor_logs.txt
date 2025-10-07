@@ -1,0 +1,100 @@
+--------- beginning of system
+10-06 15:42:31.623   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:42:34.855   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+--------- beginning of main
+10-06 15:42:35.532 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'null' to 'com.google.android.apps.nexuslauncher'
+10-06 15:42:35.532 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'null', Current: 'com.google.android.apps.nexuslauncher'
+10-06 15:42:35.533 14176 14230 I System.out: AppMonitoringCoordinator: Checking if app should be blocked: com.google.android.apps.nexuslauncher
+10-06 15:42:35.533 14176 14230 I System.out: UsageBucketManager: onAppOpened() called for: com.google.android.apps.nexuslauncher
+10-06 15:42:35.533 14176 14230 I System.out: UsageBucketManager: Is 'com.google.android.apps.nexuslauncher' restricted? false
+10-06 15:42:35.533 14176 14230 I System.out: AppMonitoringCoordinator: Should block 'com.google.android.apps.nexuslauncher'? false
+10-06 15:42:39.859   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:42:45.540 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'com.google.android.apps.nexuslauncher' to 'null'
+10-06 15:42:45.541 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'com.google.android.apps.nexuslauncher', Current: 'null'
+10-06 15:42:45.541 14176 14230 I System.out: AppMonitoringCoordinator: Handling closed app: com.google.android.apps.nexuslauncher
+10-06 15:42:46.791   618  1134 E TransitionChain: Can't collect into a chain with no transition
+10-06 15:42:46.845   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:42:46.886   480   480 E IPCThreadState: Binder transaction failure. id: 2283255, BR_*: 29189, error: -3 (No such process)
+10-06 15:42:46.886   480   480 E BpTransactionCompletedListener: Failed to transact (-32)
+10-06 15:42:46.895   618  1841 E IPCThreadState: Binder transaction failure. id: 2283274, BR_*: 29189, error: -3 (No such process)
+10-06 15:42:50.355   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:42:50.927 14463 14463 E android.vending: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:42:50.982 14463 14478 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:42:51.044 14534 14534 E ding:background: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:42:51.082 14534 14564 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:42:55.545 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'null' to 'com.google.android.apps.nexuslauncher'
+10-06 15:42:55.546 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'null', Current: 'com.google.android.apps.nexuslauncher'
+10-06 15:42:55.546 14176 14230 I System.out: AppMonitoringCoordinator: Checking if app should be blocked: com.google.android.apps.nexuslauncher
+10-06 15:42:55.547 14176 14230 I System.out: UsageBucketManager: onAppOpened() called for: com.google.android.apps.nexuslauncher
+10-06 15:42:55.547 14176 14230 I System.out: UsageBucketManager: Is 'com.google.android.apps.nexuslauncher' restricted? false
+10-06 15:42:55.548 14176 14230 I System.out: AppMonitoringCoordinator: Should block 'com.google.android.apps.nexuslauncher'? false
+10-06 15:42:56.077   618  1626 E TransitionChain: Can't collect into a chain with no transition
+10-06 15:42:56.164   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:42:56.181   618   683 E IPCThreadState: Binder transaction failure. id: 2290939, BR_*: 29189, error: -3 (No such process)
+10-06 15:42:58.447 14640 14640 E android.vending: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:42:58.557 14640 14640 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:42:58.830 14746 14746 E ding:background: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:42:58.943 14746 14775 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:02.420   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:05.551 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'com.google.android.apps.nexuslauncher' to 'null'
+10-06 15:43:05.552 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'com.google.android.apps.nexuslauncher', Current: 'null'
+10-06 15:43:05.553 14176 14230 I System.out: AppMonitoringCoordinator: Handling closed app: com.google.android.apps.nexuslauncher
+10-06 15:43:11.595 14640 14640 E AbstractLogEventBuilder: The provided ProductIdOrigin 3 is not one of the process-level expected values: 1 or 2
+10-06 15:43:14.028   618  1173 E ActivityTaskManager: Could not find activity for task 149
+10-06 15:43:14.658   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:18.652   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:22.877   618  1820 E UserRestrictionsUtils: Unknown restriction queried by uid 1000 (com.android.DeviceAsWebcam et al): null
+10-06 15:43:22.877   618  1820 E UserRestrictionsUtils: Unknown restriction queried by uid 1000 (com.android.DeviceAsWebcam et al): null
+10-06 15:43:25.757   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:32.461   618   711 E TransitionChain: Can't collect into a chain with no transition
+10-06 15:43:32.492   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:36.053   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:45.567 14176 14230 I System.out: AppMonitoringCoordinator: Poll #11 - Current app: null
+10-06 15:43:50.479 14865 14865 E android.vending: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:43:50.599 14865 14865 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:51.268 14977 14977 E ding:background: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:43:51.400 14977 15009 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:51.545  1234  1528 E UsageReportingOptionsSt: INTERNAL_ERROR: setOptInOption should not be called while user is locked. [CONTEXT service_id=41 ]
+10-06 15:43:52.880 15054 15054 E ng:quick_launch: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:43:52.939 15054 15078 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:52.972 14977 14993 E Finsky:background: [59] [Counters] attempted to use a non-positive increment for: 1449
+10-06 15:43:52.972 14977 14993 E Finsky:background: [59] [Counters] attempted to use a non-positive increment for: 1422
+10-06 15:43:52.974 14977 14994 E Finsky:background: [60] [Counters] attempted to use a non-positive increment for: 1450
+10-06 15:43:52.974 14977 14994 E Finsky:background: [60] [Counters] attempted to use a non-positive increment for: 1424
+10-06 15:43:53.023 14977 15010 E Finsky:background: [71] [Counters] attempted to use a non-positive increment for: 1443
+10-06 15:43:53.217 15111 15111 E t_app_installer: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:43:53.459 14865 15141 E ActivityThread: Failed to find provider info for androidx.car.app.connection
+10-06 15:43:53.563 15111 15142 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:53.834   186   193 E lowmemorykiller: process_mrelease 4406 failed: No such process
+10-06 15:43:53.883   186   193 E lowmemorykiller: process_mrelease 2185 failed: No such process
+10-06 15:43:53.883   186   192 E lowmemorykiller: process_mrelease 3997 failed: No such process
+10-06 15:43:53.947   186   192 E lowmemorykiller: process_mrelease 3569 failed: No such process
+10-06 15:43:53.959   618   720 E AppOps  : Bad call made by uid 1000. Package "com.google.android.apps.photos" does not belong to uid 1000.
+10-06 15:43:53.979   186   193 E lowmemorykiller: process_mrelease 2458 failed: No such process
+10-06 15:43:54.048   186   193 E lowmemorykiller: process_mrelease 2770 failed: No such process
+10-06 15:43:54.072   186   192 E lowmemorykiller: process_mrelease 3496 failed: No such process
+10-06 15:43:54.106   186   193 E lowmemorykiller: process_mrelease 3045 failed: No such process
+10-06 15:43:54.163   186   193 E lowmemorykiller: process_mrelease 3703 failed: No such process
+10-06 15:43:54.194   186   192 E lowmemorykiller: process_mrelease 9122 failed: No such process
+10-06 15:43:54.317 15165 15165 E android.rkpdapp: Not starting debugger since process cannot load the jdwp agent.
+10-06 15:43:54.391 15165 15181 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-06 15:43:54.486   618  1542 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-06 15:43:55.481  1627  1627 E ChimeraRcvrProxy: com.google.android.gms.backup.GmsBackupStatusChangeReceiver dropping broadcast com.google.gservices.intent.action.GSERVICES_CHANGED
+10-06 15:43:55.658 14865 14891 E AbstractLogEventBuilder: The provided ProductIdOrigin 3 is not one of the process-level expected values: 1 or 2
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredInteractivityState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredInteractivityState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredBatteryLevel is missing.
+10-06 15:43:55.755 14865 14900 E Finsky  : [75] AU2: RequiredVehicleState is missing.

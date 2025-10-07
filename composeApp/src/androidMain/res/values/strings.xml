@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ThinkTwice</string>
+
+    <!-- Permission descriptions -->
+    <string name="usage_stats_permission_description">ThinkTwice needs access to app usage data to help you manage spending by detecting when you open shopping apps. Your data stays private and is stored only on your device.</string>
+    <string name="overlay_permission_description">ThinkTwice needs permission to display blocker screens over apps to help you achieve your saving goals.</string>
 </resources>

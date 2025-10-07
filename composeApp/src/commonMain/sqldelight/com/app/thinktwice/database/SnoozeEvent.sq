@@ -1,0 +1,75 @@
+-- SnoozeEvent table
+-- Stores active snooze timers for restricted apps
+CREATE TABLE IF NOT EXISTS SnoozeEvent (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    restrictedAppId INTEGER NOT NULL,
+    snoozeExpiryTimestamp INTEGER NOT NULL,
+    snoozeDurationMinutes INTEGER NOT NULL,
+    isActive INTEGER NOT NULL DEFAULT 1,
+    createdAt INTEGER NOT NULL,
+    FOREIGN KEY (restrictedAppId) REFERENCES RestrictedApp(id) ON DELETE CASCADE
+);
+
+-- Indexes for performance
+CREATE INDEX IF NOT EXISTS idx_snooze_event_app ON SnoozeEvent(restrictedAppId);
+CREATE INDEX IF NOT EXISTS idx_snooze_event_active ON SnoozeEvent(isActive);
+CREATE INDEX IF NOT EXISTS idx_snooze_event_expiry ON SnoozeEvent(snoozeExpiryTimestamp);
+
+-- Queries
+selectAll:
+SELECT * FROM SnoozeEvent
+ORDER BY createdAt DESC;
+
+selectActive:
+SELECT * FROM SnoozeEvent
+WHERE isActive = 1
+ORDER BY snoozeExpiryTimestamp ASC;
+
+selectActiveByAppId:
+SELECT * FROM SnoozeEvent
+WHERE restrictedAppId = ? AND isActive = 1
+ORDER BY snoozeExpiryTimestamp DESC
+LIMIT 1;
+
+selectActiveByPackageName:
+SELECT se.* FROM SnoozeEvent se
+INNER JOIN RestrictedApp ra ON se.restrictedAppId = ra.id
+WHERE ra.packageName = ? AND se.isActive = 1
+ORDER BY se.snoozeExpiryTimestamp DESC
+LIMIT 1;
+
+selectExpiredActive:
+SELECT * FROM SnoozeEvent
+WHERE isActive = 1 AND snoozeExpiryTimestamp <= ?
+ORDER BY snoozeExpiryTimestamp ASC;
+
+selectById:
+SELECT * FROM SnoozeEvent
+WHERE id = ?;
+
+insert:
+INSERT INTO SnoozeEvent (restrictedAppId, snoozeExpiryTimestamp, snoozeDurationMinutes, isActive, createdAt)
+VALUES (?, ?, ?, ?, ?);
+
+deactivate:
+UPDATE SnoozeEvent
+SET isActive = 0
+WHERE id = ?;
+
+deactivateAllForApp:
+UPDATE SnoozeEvent
+SET isActive = 0
+WHERE restrictedAppId = ?;
+
+deactivateExpired:
+UPDATE SnoozeEvent
+SET isActive = 0
+WHERE isActive = 1 AND snoozeExpiryTimestamp <= ?;
+
+deleteById:
+DELETE FROM SnoozeEvent
+WHERE id = ?;
+
+deleteOldInactive:
+DELETE FROM SnoozeEvent
+WHERE isActive = 0 AND createdAt < ?;

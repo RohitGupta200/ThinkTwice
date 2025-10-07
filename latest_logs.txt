@@ -1,0 +1,28 @@
+10-06 15:42:35.532 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'null' to 'com.google.android.apps.nexuslauncher'
+10-06 15:42:35.532 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'null', Current: 'com.google.android.apps.nexuslauncher'
+10-06 15:42:35.533 14176 14230 I System.out: AppMonitoringCoordinator: Checking if app should be blocked: com.google.android.apps.nexuslauncher
+10-06 15:42:35.533 14176 14230 I System.out: UsageBucketManager: onAppOpened() called for: com.google.android.apps.nexuslauncher
+10-06 15:42:35.533 14176 14230 I System.out: UsageBucketManager: Is 'com.google.android.apps.nexuslauncher' restricted? false
+10-06 15:42:35.533 14176 14230 I System.out: AppMonitoringCoordinator: Should block 'com.google.android.apps.nexuslauncher'? false
+10-06 15:42:45.540 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'com.google.android.apps.nexuslauncher' to 'null'
+10-06 15:42:45.541 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'com.google.android.apps.nexuslauncher', Current: 'null'
+10-06 15:42:45.541 14176 14230 I System.out: AppMonitoringCoordinator: Handling closed app: com.google.android.apps.nexuslauncher
+10-06 15:42:55.545 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'null' to 'com.google.android.apps.nexuslauncher'
+10-06 15:42:55.546 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'null', Current: 'com.google.android.apps.nexuslauncher'
+10-06 15:42:55.546 14176 14230 I System.out: AppMonitoringCoordinator: Checking if app should be blocked: com.google.android.apps.nexuslauncher
+10-06 15:42:55.547 14176 14230 I System.out: UsageBucketManager: onAppOpened() called for: com.google.android.apps.nexuslauncher
+10-06 15:42:55.547 14176 14230 I System.out: UsageBucketManager: Is 'com.google.android.apps.nexuslauncher' restricted? false
+10-06 15:42:55.548 14176 14230 I System.out: AppMonitoringCoordinator: Should block 'com.google.android.apps.nexuslauncher'? false
+10-06 15:43:05.551 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'com.google.android.apps.nexuslauncher' to 'null'
+10-06 15:43:05.552 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'com.google.android.apps.nexuslauncher', Current: 'null'
+10-06 15:43:05.553 14176 14230 I System.out: AppMonitoringCoordinator: Handling closed app: com.google.android.apps.nexuslauncher
+10-06 15:43:45.567 14176 14230 I System.out: AppMonitoringCoordinator: Poll #11 - Current app: null
+10-06 15:44:05.611 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'null' to 'com.google.android.apps.nexuslauncher'
+10-06 15:44:05.611 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'null', Current: 'com.google.android.apps.nexuslauncher'
+10-06 15:44:05.612 14176 14230 I System.out: AppMonitoringCoordinator: Checking if app should be blocked: com.google.android.apps.nexuslauncher
+10-06 15:44:05.612 14176 14230 I System.out: UsageBucketManager: onAppOpened() called for: com.google.android.apps.nexuslauncher
+10-06 15:44:05.612 14176 14230 I System.out: UsageBucketManager: Is 'com.google.android.apps.nexuslauncher' restricted? false
+10-06 15:44:05.613 14176 14230 I System.out: AppMonitoringCoordinator: Should block 'com.google.android.apps.nexuslauncher'? false
+10-06 15:44:15.616 14176 14230 I System.out: AppMonitoringCoordinator: App changed from 'com.google.android.apps.nexuslauncher' to 'null'
+10-06 15:44:15.616 14176 14230 I System.out: AppMonitoringCoordinator: handleAppChange() - Previous: 'com.google.android.apps.nexuslauncher', Current: 'null'
+10-06 15:44:15.616 14176 14230 I System.out: AppMonitoringCoordinator: Handling closed app: com.google.android.apps.nexuslauncher

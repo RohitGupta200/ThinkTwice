@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS Settings (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    userId INTEGER NOT NULL,
+    key TEXT NOT NULL,
+    value TEXT NOT NULL,
+    createdAt INTEGER NOT NULL,
+    updatedAt INTEGER NOT NULL,
+    FOREIGN KEY(userId) REFERENCES User(id) ON DELETE CASCADE,
+    UNIQUE(userId, key)
+);
+
+-- Index for better performance
+CREATE INDEX IF NOT EXISTS settings_user_key_idx ON Settings(userId, key);
+
+-- Queries
+insertOrUpdateSetting:
+INSERT OR REPLACE INTO Settings(userId, key, value, createdAt, updatedAt)
+VALUES(?, ?, ?, ?, ?);
+
+getSettingByUserAndKey:
+SELECT * FROM Settings WHERE userId = ? AND key = ?;
+
+getSettingsByUserId:
+SELECT * FROM Settings WHERE userId = ? ORDER BY key;
+
+getAllSettings:
+SELECT * FROM Settings ORDER BY userId, key;
+
+deleteSetting:
+DELETE FROM Settings WHERE userId = ? AND key = ?;
+
+deleteSettingsByUserId:
+DELETE FROM Settings WHERE userId = ?;
+
+deleteAllSettings:
+DELETE FROM Settings;
